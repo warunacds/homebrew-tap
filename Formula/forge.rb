@@ -7,16 +7,16 @@ class Forge < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/warunacds/Forge/releases/download/v#{version}/Forge-macOS-arm64.dmg"
-      sha256 "PLACEHOLDER_ARM64_SHA"
+      sha256 "0be47ee38658942f6339f05480367d880a674b71419449c37597173f06d33ca8"
     else
       url "https://github.com/warunacds/Forge/releases/download/v#{version}/Forge-macOS-intel.dmg"
-      sha256 "PLACEHOLDER_INTEL_SHA"
+      sha256 "c9d065b1322e62118dc4c87eaf58bfd76db2ef9e460d42abb2d7bf6f66e49ee3"
     end
   end
 
   on_linux do
     url "https://github.com/warunacds/Forge/releases/download/v#{version}/Forge-linux-amd64.tar.gz"
-    sha256 "PLACEHOLDER_LINUX_SHA"
+    sha256 "44a64c1a852552898ebb63d46a2731529851339475ab0e7a0ec98b18a60e0657"
   end
 
   def install
