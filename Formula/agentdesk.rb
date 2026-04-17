@@ -1,12 +1,12 @@
 class Agentdesk < Formula
   desc "All your agents, skills, and rules in one place"
   homepage "https://agentdesk.sh"
-  version "0.5.10-beta"
+  version "0.6.0-beta"
   license "Proprietary"
 
   on_linux do
     url "https://releases.agentdesk.sh/v#{version}/AgentDesk-linux-amd64.tar.gz"
-    sha256 "7a00551d951f259c0b38cda0bbfe969d176d34c82a4e660d779fca491f4a1ddc"
+    sha256 "f9fff543a70a92d07c962f33dcd337e34bc2a159e921e1970f332be53df57282"
   end
 
   def install
