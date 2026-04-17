@@ -1,16 +1,11 @@
 cask "agentdesk" do
-  version "0.5.9-beta"
+  version "0.5.10-beta"
 
-  if Hardware::CPU.arm?
-    url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-arm64.dmg"
-    sha256 "0e760f761ce19e916e4a531c6655c5356d3bab517ff62a72d4d95fac5f808ed2"
-  else
-    url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-intel.dmg"
-    sha256 "fefccd5f8a5e9925866920a5d142a9aaafb3b23d09c1e110a5c0746f91161f3e"
-  end
+  url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-universal.dmg"
+  sha256 "de1b472e175157c53b653108513b037dbf738c67986b7f5e83f20364c4deaba5"
 
   name "Agent Desk"
-  desc "All your agents, skills, and rules in one place"
+  desc "AI agent skill file manager"
   homepage "https://agentdesk.sh"
 
   app "Agent Desk.app"
