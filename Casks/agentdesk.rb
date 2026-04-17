@@ -1,8 +1,8 @@
 cask "agentdesk" do
-  version "0.5.6-beta"
+  version "0.5.7-beta"
 
   url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-universal.dmg"
-  sha256 "6f23d831ec85692aff8ed2086d9388072dbe2b047e222725cce828e2978dfb2c"
+  sha256 "7ef6f01da227e82fb49b6368d111e1bfd43e2cc5f661dc18784a411a0fb8edc7"
 
   name "Agent Desk"
   desc "AI agent skill file manager"
