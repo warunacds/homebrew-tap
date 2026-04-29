@@ -1,26 +1,24 @@
 cask "agentdesk" do
-  version "0.6.5-beta"
+  version "0.7.0-beta"
 
-  if Hardware::CPU.arm?
+  on_arm do
     url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-arm64.dmg"
-    sha256 "37ea3863c5bb04a37152e5c16d3f1d9fe37e4cf88ff6207e8ab7b4a674c67fb8"
-  else
+    sha256 "dcd35b909c81eae4c466595278534bfe1dd5c0d697a2363cab3676748b168a35"
+  end
+
+  on_intel do
     url "https://releases.agentdesk.sh/v#{version}/AgentDesk-macOS-intel.dmg"
-    sha256 "ee4004b972c979a4a4befa3e692dd059adad03a70f3fe852d44d4e957abeb4a3"
+    sha256 "3423823f4c3a3f44731739992e49e8896f0c8f5e981845194b40ce35dcc89a90"
   end
 
   name "Agent Desk"
-  desc "All your agents, skills, and rules in one place"
+  desc "AI agent skill file manager"
   homepage "https://agentdesk.sh"
 
-  app "Agent Desk.app"
+  app "AgentDesk.app"
 
   zap trash: [
+    "~/.agentdesk",
     "~/.forge",
   ]
-
-  caveats <<~EOS
-    On first launch, macOS may block the app.
-    Right-click the app, then click Open to bypass Gatekeeper.
-  EOS
 end
